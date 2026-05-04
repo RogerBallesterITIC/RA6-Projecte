@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RA6 Projecte</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+
+    <div class="section">
+      <h2>ARTISTES</h2>
+      
+      <div class="card">
+        <h3>Afegir Artista</h3>
+        <form id="artist-form">
+          <div>
+            <label for="artist-name">Nom de l'artista</label>
+            <input id="artist-name" name="name" required />
+          </div>
+          <div>
+            <button type="submit">Desar Artista</button>
+          </div>
+        </form>
+        <div id="artist-message" class="status-message"></div>
+      </div>
+
+      <div class="card">
+        <h3>Modificar Artista</h3>
+        <div>
+          <select id="edit-artist-dropdown"></select>
+          <input id="new-artist-name" placeholder="Nou nom" />
+          <button id="update-artist-btn">Modificar</button>
+        </div>
+        <div id="artist-update-message" class="status-message"></div>
+      </div>
+
+      <div class="card">
+        <h3>Eliminar Artista</h3>
+        <div>
+          <select id="delete-artist-dropdown"></select>
+          <button id="delete-artist-btn">Eliminar Artista</button>
+        </div>
+        <div id="artist-delete-message" class="status-message"></div>
+      </div>
+
+      <div class="card">
+        <h3>Llistar Artistes</h3>
+        <button id="load-artists-btn" type="button">Carregar Artistes</button>
+        <pre id="artists-output"></pre>
+        <div id="artist-list-message" class="status-message"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>ÀLBUMS</h2>
+      
+      <div class="card">
+        <h3>Afegir Àlbum</h3>
+        <div>
+          <select id="album-artist-dropdown"></select>
+          <input id="album-title" placeholder="Títol de l'àlbum" />
+          <input id="album-year" placeholder="Any (opcional)" type="number" />
+          <button id="add-album-btn">Afegir Àlbum</button>
+        </div>
+        <div id="album-message" class="status-message"></div>
+      </div>
+
+      <div class="card">
+        <h3>Eliminar Àlbum</h3>
+        <div>
+          <select id="delete-album-dropdown"></select>
+          <button id="delete-album-btn">Eliminar Àlbum</button>
+        </div>
+        <div id="album-delete-message" class="status-message"></div>
+      </div>
+
+      <div class="card">
+        <h3>Llistar Àlbums</h3>
+        <button id="load-albums-btn" type="button">Carregar Àlbums</button>
+        <pre id="albums-output"></pre>
+        <div id="album-list-message" class="status-message"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>CANÇONS</h2>
+      
+      <div class="card">
+        <h3>Afegir Cançó</h3>
+        <div>
+          <select id="song-artist-dropdown"></select>
+          <select id="song-album-dropdown">
+            <option value="">Primer selecciona un artista</option>
+          </select>
+          <input id="song-title" placeholder="Títol de la cançó" />
+          <button id="add-song-btn">Afegir Cançó</button>
+        </div>
+        <div id="song-message" class="status-message"></div>
+      </div>
+
+      <div class="card">
+        <h3>Eliminar Cançó</h3>
+        <div>
+          <select id="delete-song-dropdown"></select>
+          <button id="delete-song-btn">Eliminar Cançó</button>
+        </div>
+        <div id="song-delete-message" class="status-message"></div>
+      </div>
+
+      <div class="card">
+        <h3>Llistar Cançons</h3>
+        <button id="load-songs-btn" type="button">Carregar Cançons</button>
+        <pre id="songs-output"></pre>
+        <div id="song-list-message" class="status-message"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

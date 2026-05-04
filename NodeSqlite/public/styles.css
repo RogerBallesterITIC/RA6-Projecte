@@ -1,0 +1,160 @@
+﻿:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #0f766e;
+  --accent-dark: #0b5a54;
+  --border: #d1d5db;
+  --danger: #b91c1c;
+  --ok: #166534;
+  --warning: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+  color: var(--text);
+  background: linear-gradient(135deg, #ecfeff, #eef2ff 55%, #f8fafc);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--accent);
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.card h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input, select, button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+select {
+  cursor: pointer;
+  background-color: white;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: var(--accent);
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+pre {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.85rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.status-message {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.status-message.ok {
+  background: #f0fdf4;
+  border-left: 4px solid var(--ok);
+  color: var(--ok);
+}
+
+.status-message.error {
+  background: #fef2f2;
+  border-left: 4px solid var(--danger);
+  color: var(--danger);
+}
+
+.status-message.warning {
+  background: #fffbeb;
+  border-left: 4px solid var(--warning);
+  color: var(--warning);
+}
+
+.card > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.card > div > * {
+  margin-bottom: 0;
+}
+
